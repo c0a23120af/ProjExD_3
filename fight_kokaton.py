@@ -12,7 +12,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def check_bound(obj_rct: pg.Rect) -> tuple[bool, bool]:
     """
-    オブジェクトが画面内or画面外を判定し，真理値タプルを返す関数
+    オブジェクトが画面内or画面外を判定し真理値タプルを返す関数
     引数：こうかとんや爆弾，ビームなどのRect
     戻り値：横方向，縦方向のはみ出し判定結果（画面内：True／画面外：False）
     """
@@ -177,6 +177,7 @@ def main():
             if bomb.rct.colliderect(beam.rct):
                     bomb = None
                     beam = None
+
 
         key_lst = pg.key.get_pressed()
         bird.update(key_lst, screen)
